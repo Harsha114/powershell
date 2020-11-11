@@ -1,0 +1,1 @@
+Get-GPO -All |Where-Object { $_ | Get-GPOReport -ReportType XML| Select-String -NotMatch "<LinksTo>" } | export-csv -path C:\Users\Administrator\Documents\Scripts\hello1.csv
