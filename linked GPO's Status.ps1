@@ -1,0 +1,1 @@
+Get-GPO -All |Where-Object { $_ | Get-GPOReport -ReportType XML| Select-String "<LinksTo>" } | export-csv -path C:\hello13456.csv
